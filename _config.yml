@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: JinNate # the main title
 
-tagline: 지식방주 # it will display as the sub-title
+tagline: Game Programmer # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   지식 저장소.
@@ -38,7 +38,7 @@ social:
   email: jintaenate@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
+    # - https://twitter.com/username # change to your twitter homepage
     - https://github.com/OneThingChanged # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -73,7 +73,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar /images/Logo/JinLogo_192x192.png:
 
 # boolean type, the global switch for TOC in posts.
 toc: true
