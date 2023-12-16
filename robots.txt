@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://onethingchanged.github.io/sitemap.xml
