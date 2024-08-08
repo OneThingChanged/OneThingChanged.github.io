@@ -30,7 +30,7 @@ last_modified_at: 2023-12-09
 
 다음 그림은 운영체제가 제공하는 메모리 공간을 표현하고 있습니다.
 
-![메모리 구조](../../images/2023-12-09-ComputerScience-01/MemoryStructure.png)
+![MemoryStructure](https://github.com/user-attachments/assets/78cf06aa-8f7a-4dd8-93ec-97cfd7866edc)
 
 ## 코드 세그먼트 (Code Segment):
 
