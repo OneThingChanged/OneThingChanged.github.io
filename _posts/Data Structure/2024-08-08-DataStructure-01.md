@@ -18,7 +18,7 @@ last_modified_at: 2024-08-08
 
 해시 테이블은 (Key, Value)로 데이터를 저장하는 자료구조 중 하나로 빠르게 데이터를 검색할 수 있는 자료구조이다. 해시 테이블이 빠른 검색속도를 제공하는 이유는 내부적으로 배열(버킷)을 사용하여 데이터를 저장하기 때문이다. 해시 테이블은 각각의 Key값에 해시함수를 적용해 배열의 고유한 index를 생성하고, 이 index를 활용해 값을 저장하거나 검색하게 된다. 여기서 실제 값이 저장되는 장소를 버킷 또는 슬롯이라고 한다.
 
-![CPP-01](../../images/2024-08-08-datastructure-01/datastructure_01.png)
+![datastructure_01](https://github.com/user-attachments/assets/7873731d-bac1-44b9-a739-a2a8d8cb0fe8)
 
 예를 들어 우리가 (Key, Value)가 ("John Smith", "521-1234")인 데이터를 크기가 16인 해시 테이블에 저장한다고 하자. 그러면 먼저 index = hash_function("John Smith") % 16 연산을 통해 index 값을 계산한다. 그리고 array[index] = "521-1234" 로 전화번호를 저장하게 된다.
 
@@ -47,7 +47,7 @@ last_modified_at: 2024-08-08
 
 ## **[ 분리 연결법(Separate Chaining) ]**
 
-![CPP-01](../../images/2024-08-08-datastructure-01/datastructure_02.png)
+![datastructure_02](https://github.com/user-attachments/assets/ee7bc6a1-8407-4e29-a526-e2fb839d73e3)
 
 Separate Chaining이란 동일한 버킷의 데이터에 대해 자료구조를 활용해 추가 메모리를 사용하여 다음 데이터의 주소를 저장하는 것이다. 위의 그림과 같이 동일한 버킷으로 접근을 한다면 데이터들을 연결을 해서 관리해주고 있다. 실제로 Java8의 Hash테이블은 Self-Balancing Binary Search Tree 자료구조를 사용해 Chaining 방식을 구현하였다.
 이러한 Chaining 방식은 해시 테이블의 확장이 필요없고 간단하게 구현이 가능하며, 손쉽게 삭제할 수 있다는 장점이 있다. 하지만 데이터의 수가 많아지면 동일한 버킷에 chaining되는 데이터가 많아지며 그에 따라 캐시의 효율성이 감소한다는 단점이 있다.
@@ -60,7 +60,7 @@ Open Addressing이란 추가적인 메모리를 사용하는 Chaining 방식과 
 2. Quadratic Probing: 해시의 저장순서 폭을 제곱으로 저장하는 방식이다. 예를 들어 처음 충돌이 발생한 경우에는 1만큼 이동하고 그 다음 계속 충돌이 발생하면 2^2, 3^2 칸씩 옮기는 방식이다.
 3. Double Hashing Probing: 해시된 값을 한번 더 해싱하여 해시의 규칙성을 없애버리는 방식이다. 해시된 값을 한번 더 해싱하여 새로운 주소를 할당하기 때문에 다른 방법들보다 많은 연산을 하게 된다.
 
-![CPP-01](../../images/2024-08-08-datastructure-01/datastructure_03.png)
+![datastructure_03](https://github.com/user-attachments/assets/6d1ecbd0-078a-4181-a73c-7f51ce1fe16a)
 
 Open Addressing에서 데이터를 삭제하면 삭제된 공간은 Dummy Space로 활용되는데, 그렇기 때문에 Hash Table을 재정리 해주는 작업이 필요하다고 한다.
 
